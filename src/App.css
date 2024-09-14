@@ -295,9 +295,6 @@ p:hover {
     font-size: 1.4rem;
   }
 
-  .input{
-    min-width: 60vw;
-  }
 }
 
 /* For devices with a width between 601px and 900px (Tablets) */
