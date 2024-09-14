@@ -1,6 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   user-select: none;
-  overflow-x: hidden;
+  box-sizing: border-box;
+   overflow-x: hidden;   
 }

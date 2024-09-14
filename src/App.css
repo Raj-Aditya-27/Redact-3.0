@@ -23,28 +23,35 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 2%;
 }
 
 /* Navbar */
 .navbar {
-  /* background-color: var(--secondary-color); */
   color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 10vh;
   font-size: 1.3rem;
+  width: 100vw;
   padding: 0 2%;
 }
 
 .logo {
-  font-size: 2rem;
+  height: 100%;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.logo img {
+  height: 100%;
 }
 
 .about {
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 /* Footer */
@@ -243,7 +250,7 @@ p:hover {
   flex-direction: column;
 }
 
-.animation-background .bi-x-circle{
+.animation-background .bi-x-circle {
   color: var(--primary-color);
   font-size: 1.5rem;
 }
@@ -253,9 +260,9 @@ p:hover {
 }
 
 button:disabled {
-  background-color: grey; 
+  background-color: grey;
   cursor: not-allowed;
-  opacity: 0.6; 
+  opacity: 0.6;
 }
 
 /* For devices with a maximum width of 600px (Mobile Phones) */
@@ -263,11 +270,6 @@ button:disabled {
   .navbar {
     font-size: 1rem;
     height: 8vh;
-    padding: 0 1rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
   }
 
   .footer {
@@ -307,7 +309,6 @@ button:disabled {
     font-size: 0.9rem;
   }
 
-
   .scale {
     width: 70%;
   }
@@ -322,11 +323,6 @@ button:disabled {
   .navbar {
     font-size: 1.1rem;
     height: 9vh;
-    padding: 0 1.5rem;
-  }
-
-  .logo {
-    font-size: 1.8rem;
   }
 
   .footer {
