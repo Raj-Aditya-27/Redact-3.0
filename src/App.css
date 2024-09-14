@@ -12,6 +12,7 @@
   width: 100vw;
 }
 
+/* Home */
 .home {
   background-image: url("./assets/bg.png");
   background-position: center;
@@ -188,7 +189,7 @@ p:hover {
   }
 
   .hero-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .hero-content p {
