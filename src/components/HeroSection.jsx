@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import heroImage from '../assets/heroImageBg.png';
+import heroImage from "../assets/heroImageBg.png";
 
 function HeroSection() {
   return (

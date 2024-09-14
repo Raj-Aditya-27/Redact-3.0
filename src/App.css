@@ -13,7 +13,8 @@
 }
 
 /* Home */
-.home {
+.home,
+.document {
   background-image: url("./assets/bg.png");
   background-position: center;
   background-size: cover;
@@ -108,7 +109,7 @@
 
 .heroSection h2:hover,
 p:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 @keyframes slideInFromLeft {
@@ -150,6 +151,91 @@ p:hover {
 .button:hover {
   color: var(--primary-color);
   background-color: var(--white);
+}
+
+/* Files */
+.file-section {
+  min-height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input {
+  min-height: 50vh;
+  min-width: 70vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px dashed var(--primary-color);
+}
+
+.heading {
+  font-size: 2rem;
+  color: #ff0000;
+}
+
+.icons {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.scale {
+  width: 30%;
+  height: 7%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bi-filetype-pdf,
+.bi-file-earmark-lock {
+  color: #ff0000;
+}
+
+.bi-arrow-right-short {
+  color: white;
+}
+
+.file-input {
+  display: none;
+}
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  font-weight: bolder;
+}
+.file-input-label:hover {
+  background-color: rgba(255, 255, 255, 0.873);
+}
+.file-name {
+  margin-left: 10px;
+  font-style: italic;
+  color: white;
+}
+
+.bi-x-circle {
+  cursor: pointer;
+}
+
+.selected {
+  border: 1px dashed white;
+}
+
+.blurred-background {
+  position: absolute;
+  z-index: 1;
+  /* backdrop-filter: blur(10px); */
 }
 
 /* For devices with a maximum width of 600px (Mobile Phones) */
@@ -199,6 +285,18 @@ p:hover {
   .button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .scale{
+    width: 60%;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .input{
+    min-width: 60vw;
   }
 }
 
@@ -250,6 +348,10 @@ p:hover {
   .button {
     padding: 0.6rem 1.2rem;
     font-size: 0.95rem;
+  }
+
+  .scale{
+    width: 50%;
   }
 }
 
