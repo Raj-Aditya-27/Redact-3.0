@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MyLottieAnimation from "./Animation";
 
 function Files() {
   const [fileName, setFileName] = useState("No file chosen");
@@ -34,35 +35,35 @@ function Files() {
   }
 
   function handleConvert() {
-    console.log("Enter");
     setAnimation(true);
+    console.log("Is animation active:", animation);
+
     if (!file || !isFileChosen) {
       alert("Please choose a file and scale.");
       return;
     }
-    console.log("After condition");
-    console.log("File :", file);
-    console.log("Scale: ", selectedScale);
 
     const formData = new FormData();
     formData.append("file", file);
     formData.append("level", selectedScale.toUpperCase());
 
-    console.log("After formData");
+    // fetch("/v2/analyze", {
+    //   method: "POST",
+    //   body: formData,
+    // })
+    //   .then((response) => {
+    //     console.log("Is animation response:", animation);
 
-    fetch("/v2/analyze", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-        setAnimation(false);
-        setHomePage(false);
-      })
-      .catch((error) => console.error("Error:", error));
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     setData(data);
+    //     setAnimation(false);
+    //     setHomePage(false);
+    //     console.log("Is animation data:", animation);
+
+    //   })
+    //   .catch((error) => console.error("Error:", error));
   }
 
   return (
@@ -71,7 +72,7 @@ function Files() {
         <div className="file-section">
           <div className="heading">Redact: Your Data Protector</div>
 
-          {/* {animation && <MyLottieAnimation />} */}
+          {animation && <MyLottieAnimation handleAnimation={setAnimation} />}
           <div className="input">
             <div className="icons">
               <i className="bi bi-filetype-pdf"></i>
@@ -109,6 +110,7 @@ function Files() {
                 isFileChosen && selectedScale === "high" ? "selected" : ""
               }`}
               onClick={() => handleScaleChange("high")}
+              disabled={animation}
             >
               HIGH
             </button>
@@ -117,6 +119,7 @@ function Files() {
                 isFileChosen && selectedScale === "med" ? "selected" : ""
               }`}
               onClick={() => handleScaleChange("med")}
+              disabled={animation}
             >
               MEDIUM
             </button>
@@ -125,6 +128,7 @@ function Files() {
                 isFileChosen && selectedScale === "low" ? "selected" : ""
               }`}
               onClick={() => handleScaleChange("low")}
+              disabled={animation}
             >
               LOW
             </button>

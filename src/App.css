@@ -232,10 +232,30 @@ p:hover {
   border: 1px dashed white;
 }
 
-.blurred-background {
+.animation-background {
   position: absolute;
   z-index: 1;
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(2px);
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.animation-background .bi-x-circle{
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.animation {
+  overflow: hidden;
+}
+
+button:disabled {
+  background-color: grey; 
+  cursor: not-allowed;
+  opacity: 0.6; 
 }
 
 /* For devices with a maximum width of 600px (Mobile Phones) */
@@ -287,14 +307,14 @@ p:hover {
     font-size: 0.9rem;
   }
 
-  .scale{
-    width: 60%;
+
+  .scale {
+    width: 70%;
   }
 
   .heading {
     font-size: 1.4rem;
   }
-
 }
 
 /* For devices with a width between 601px and 900px (Tablets) */
@@ -347,7 +367,7 @@ p:hover {
     font-size: 0.95rem;
   }
 
-  .scale{
+  .scale {
     width: 50%;
   }
 }
