@@ -11,7 +11,7 @@ function HeroSection() {
           Effortlessly protect data, redact, mask, and anonymize with just a few
           clicks.
         </p>
-        <Button content="Click Here to Redact" />
+        <Button content="Click Here to Redact" to="/document" />
       </div>
       <div className="hero-image">
         <img src={heroImage} alt="" />

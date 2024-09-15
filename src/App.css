@@ -52,6 +52,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  color: var(--primary-color);
 }
 
 /* Footer */
@@ -153,6 +154,10 @@ p:hover {
   border-radius: 5rem;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.link{
+  text-decoration: none;
 }
 
 .button:hover {
@@ -518,7 +523,7 @@ h1 span:nth-child(6) {
   }
 
   .buttonFeature{
-    width: 40%;
+    width: 50%;
   }
 }
 

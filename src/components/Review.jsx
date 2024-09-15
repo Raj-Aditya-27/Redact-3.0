@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 export const Review = ({ Data, setHomePage }) => {
   const [Page, setPage] = useState(0);
@@ -8,6 +9,7 @@ export const Review = ({ Data, setHomePage }) => {
   const [unSelected, setUnselected] = useState(
     Array.from({ length: totalPages }, () => [])
   );
+  const [buttonText, setButtonText] = useState("Cancel");
 
   const handlePageClick = (selected) => {
     setPage(selected.selected);
@@ -68,6 +70,9 @@ export const Review = ({ Data, setHomePage }) => {
 
         // Clean up
         URL.revokeObjectURL(url);
+
+        // Update button text to "Home"
+        setButtonText("Home");
       } else {
         console.error("Download failed.");
       }
@@ -126,17 +131,14 @@ export const Review = ({ Data, setHomePage }) => {
       />
 
       <div className="buttonFeature">
-        <Button
-          style={{ visibility: "visible" }}
-          onClick={handleSubmit}
-          content="Redact"
-        />
-
-        <Button
-          style={{ visibility: "visible" }}
-          onClick={handleCancel}
-          content="Cancel"
-        />
+        <button onClick={handleSubmit} className="button">Redact</button>
+        {buttonText === "Home" ? (
+          <Button content="Home" to={"/"}/>
+        ) : (
+          <button className="button" onClick={handleCancel}>
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );

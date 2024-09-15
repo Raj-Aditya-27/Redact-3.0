@@ -1,11 +1,13 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
-function Button({content}) {
+function Button({ content, to }) {
   return (
-    <div className='button'>
+    <Link to={to} className="link">
+      <div className="button">
         {content}
-    </div>
-  )
-}
+      </div>
+    </Link>
+  );
+} 
 
-export default Button
+export default Button;

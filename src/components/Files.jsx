@@ -61,7 +61,7 @@ function Files() {
       .then((data) => {
         setData(data);
         setAnimation(false);
-        setHomePage(false);  // Show the review page after conversion
+        setHomePage(false); // Show the review page after conversion
         console.log("Is animation data:", animation);
       })
       .catch((error) => console.error("Error:", error));
