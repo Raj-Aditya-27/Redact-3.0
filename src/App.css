@@ -51,7 +51,7 @@
   cursor: pointer;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 /* Footer */
@@ -264,6 +264,85 @@ button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
+
+/* Loading */
+section{
+  height: 100vh;
+  width: 100vw;
+  background: #212429;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+
+h1{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #ff0000;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+}
+
+h1 span{
+  opacity: 0;
+  display: inline-block;
+  animation: animate 0.5s linear forwards;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotateY(90deg);
+      filter: blur(10px);
+  }
+  100%{
+      opacity: 1;
+      transform: rotateY(0deg);
+      filter: blur(0px);
+  }
+}
+
+h1 span:nth-child(1)
+{
+  animation-delay: 1.2s;
+}
+h1 span:nth-child(2)
+{
+  animation-delay: 1.2s;
+}
+h1 span:nth-child(3)
+{
+  animation-delay: 1.2s;
+}
+h1 span:nth-child(4)
+{
+  animation-delay: 1.2s;
+}
+h1 span:nth-child(5)
+{
+  animation-delay: 1.2s;
+}
+h1 span:nth-child(6)
+{
+  animation-delay: 1.2s;
+}
+
+
 
 /* For devices with a maximum width of 600px (Mobile Phones) */
 @media (max-width: 600px) {
