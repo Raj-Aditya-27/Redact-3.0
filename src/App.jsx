@@ -33,7 +33,8 @@ function App() {
           classNames="fade"
           unmountOnExit
         >
-          <Home />
+          {/* <Home /> */}
+          <Document/>
         </CSSTransition>
       </>
     </>

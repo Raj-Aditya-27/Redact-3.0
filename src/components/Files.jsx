@@ -1,14 +1,16 @@
 import { useState } from "react";
 import MyLottieAnimation from "./Animation";
+import { Review } from "./Review";
+import sample from "../assets/Sample_JSON_data.json";
 
 function Files() {
   const [fileName, setFileName] = useState("No file chosen");
   const [isFileChosen, setIsFileChosen] = useState(false);
   const [selectedScale, setSelectedScale] = useState("high");
-  const [homePage, setHomePage] = useState(true);
-  const [file, setFile] = useState(null);
+  const [homePage, setHomePage] = useState(false);
+  const [file, setFile] = useState(sample);
   const [animation, setAnimation] = useState(false);
-  const [Data, setData] = useState(undefined);
+  const [Data, setData] = useState(sample);
 
   function handleFileChoose(event) {
     const chosenFile = event.target.files[0];
@@ -47,28 +49,27 @@ function Files() {
     formData.append("file", file);
     formData.append("level", selectedScale.toUpperCase());
 
-    // fetch("/v2/analyze", {
-    //   method: "POST",
-    //   body: formData,
-    // })
-    //   .then((response) => {
-    //     console.log("Is animation response:", animation);
+    fetch("/v2/analyze", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        console.log("Is animation response:", animation);
 
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     setData(data);
-    //     setAnimation(false);
-    //     setHomePage(false);
-    //     console.log("Is animation data:", animation);
-
-    //   })
-    //   .catch((error) => console.error("Error:", error));
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+        setAnimation(false);
+        setHomePage(false);  // Show the review page after conversion
+        console.log("Is animation data:", animation);
+      })
+      .catch((error) => console.error("Error:", error));
   }
 
   return (
     <>
-      {homePage && (
+      {homePage ? (
         <div className="file-section">
           <div className="heading">Redact: Your Data Protector</div>
 
@@ -134,14 +135,9 @@ function Files() {
             </button>
           </div>
         </div>
-      )}
-
-      {!homePage && (
+      ) : (
         <>
-          <ReviewPage Data={Data} />
-          <button className="submit" onClick={() => setHomePage(true)}>
-            Cancel
-          </button>
+          <Review Data={Data} setHomePage={setHomePage} />
         </>
       )}
     </>
