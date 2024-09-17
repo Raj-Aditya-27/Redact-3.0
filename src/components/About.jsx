@@ -1,5 +1,5 @@
 import React from "react";
-import swaraat from "../assets/swaraat.jpeg";
+import swaraat from "../assets/swaraat.png";
 
 function About() {
   return (

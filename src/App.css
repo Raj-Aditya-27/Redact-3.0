@@ -561,17 +561,17 @@ iframe {
     flex-direction: column-reverse;
     min-height: 92vh;
     justify-content: center;
+    gap: 20px;
   }
 
   .hero-content {
     row-gap: 1rem;
     font-size: 0.9rem;
-    /* background-color: lightblue; */
   }
 
   .hero-image {
     width: 100vw;
-    /* background-color: lightcoral; */
+    padding: 0;
   }
 
   .hero-image img {
@@ -667,6 +667,7 @@ iframe {
 
   h1 {
     top: 70%;
+    font-size: 4rem;
   }
 }
 
