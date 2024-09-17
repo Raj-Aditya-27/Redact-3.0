@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/logo.png";
+import img from "../assets/anonify.png";
 
 
 function Navbar() {
@@ -9,9 +9,9 @@ function Navbar() {
       <Link to="/" className="logo">
         <img src={img} alt="Logo" />
       </Link>
-      <Link to="/about" className="about link">
+      {/* <Link to="/about" className="about link">
         About
-      </Link>
+      </Link> */}
     </div>
   );
 }
