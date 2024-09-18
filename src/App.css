@@ -213,6 +213,10 @@
   transition: all 0.3s ease;
 }
 
+.hero-content h2 {
+  font-size: 2.5rem;
+}
+
 .heroSection h2:hover,
 p:hover {
   transform: scale(1.05);
@@ -568,7 +572,7 @@ h1 span:nth-child(7) {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 0% 1%;
   flex-direction: column;
 }
@@ -591,7 +595,7 @@ h1 span:nth-child(7) {
   min-height: 10vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary-color);
@@ -620,12 +624,24 @@ h1 span:nth-child(7) {
 .members {
   width: 20%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
   height: 60vh;
   box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.member-details > div:nth-child(1){
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.member-details > div:nth-child(2){
+  color: var(--text-light);
+  font-size: 1rem;
+  overflow: hidden;
 }
 
 .members img {
@@ -637,8 +653,8 @@ h1 span:nth-child(7) {
 
 iframe {
   width: 600px;
-  height: 400px;
-  border: 5px solid var(--primary-color);
+  height: 350px;
+  border: 5px solid var(--text-light);
   border-radius: 20px;
 }
 
@@ -678,7 +694,7 @@ iframe {
     flex-direction: column-reverse;
     min-height: 86vh;
     justify-content: center;
-    gap: 20px;
+    gap: 0px;
   }
 
   .hero-content {
@@ -692,7 +708,7 @@ iframe {
   }
 
   .hero-image img {
-    width: 500px;
+    width: 450px;
   }
 
   .hero-content h2 {
@@ -747,6 +763,8 @@ iframe {
 
   .team-heading {
     font-size: 1.3rem;
+
+    align-items: center;
   }
 
   .team-members {
@@ -754,6 +772,7 @@ iframe {
     row-gap: 20px;
     min-height: 100vh;
     padding: 2%;
+    
   }
 
   .member-details {
@@ -763,9 +782,10 @@ iframe {
   }
 
   .members {
-    width: 60%;
+    width: 90%;
     flex-direction: column;
     min-height: 30vh;
+
   }
 
   .members img {
@@ -827,6 +847,7 @@ iframe {
     font-size: 1rem;
   }
 
+ 
   .hero-image {
     width: 100vw;
     /* background-color: lightgreen; */
@@ -839,7 +860,7 @@ iframe {
   }
 
   .hero-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero-content p {

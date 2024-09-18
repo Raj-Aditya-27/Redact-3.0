@@ -6,12 +6,13 @@ function HeroSection() {
   return (
     <div className="heroSection background">
       <div className="hero-content">
-        <h2>Simple, Secure Redaction</h2>
+        <h2>Secure Documents, Protect Privacy</h2>
         <p>
-          Effortlessly protect data, redact, mask, and anonymize with just a few
-          clicks.
+          Ensure your information stays private with Anonify’s secure,
+          easy-to-use platform, featuring fast encryption and redaction
+          capabilities.
         </p>
-        <Button content="Click Here to Redact" to="/document" />
+        <Button content="Click here to Anonymize" to="/document" />
       </div>
       <div className="hero-image">
         <img src={heroImage} alt="" />

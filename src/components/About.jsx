@@ -3,6 +3,7 @@ import swaraat from "../assets/swaraat.png";
 import aditya from "../assets/aditya.png";
 import nabeel from "../assets/nabeel.png";
 import syed from "../assets/syed.png";
+import Button from "./Button";
 
 function About() {
   return (
@@ -16,11 +17,17 @@ function About() {
           allowFullScreen
         ></iframe>
         <div className="video-details">
-          The RE-DACT application is a versatile and secure redaction tool
-          designed to anonymize, mask, and redact sensitive information across
-          various document formats. It allows users to apply a user-defined
-          gradational scale for redaction, ensuring data protection and
-          compliance with privacy regulations.
+          Anonify is a powerful tool designed to protect your privacy by
+          securely masking or redacting sensitive information in documents,
+          text, and files. To get started, upload the file or text you want to
+          safeguard. Choose the level of masking you need, from minimal to
+          extensive coverage. Anonify uses advanced NLP technology to
+          automatically identify and conceal personal data such as names,
+          emails, and addresses. After processing, review the document to ensure
+          all sensitive information is appropriately masked and make any
+          necessary adjustments. Finally, save or export your secure document,
+          knowing Anonify has kept your data private and protected, whether
+          you’re working online or offline.
         </div>
       </div>
       <div className="team" id="team">
@@ -28,26 +35,26 @@ function About() {
         <div className="team-members">
           <div className="members">
             <div>
-              <img
-                src={aditya}
-                alt=""
-              />
+              <img src={aditya} alt="" />
             </div>
             <div className="member-details">
               <div>Aditya Raj</div>
               <div>Frontend Developer</div>
             </div>
+            <div>
+              <Button content="Connect"/>
+            </div>
           </div>
           <div className="members">
             <div>
-              <img
-                src={nabeel}
-                alt=""
-              />
+              <img src={nabeel} alt="" />
             </div>
             <div className="member-details">
               <div>Nabeel Wasif</div>
               <div>Data Scientist</div>
+            </div>
+            <div>
+              <Button content="Connect"/>
             </div>
           </div>
           <div className="members">
@@ -58,17 +65,20 @@ function About() {
               <div>Swaraat Chatterjee</div>
               <div>Backend Developer</div>
             </div>
+            <div>
+              <Button content="Connect"/>
+            </div>
           </div>
           <div className="members">
             <div>
-              <img
-                src={syed}
-                alt=""
-              />
+              <img src={syed} alt="" />
             </div>
             <div className="member-details">
               <div>Syed Abdul</div>
               <div>Cloud Developer</div>
+            </div>
+            <div>
+              <Button content="Connect"/>
             </div>
           </div>
         </div>
