@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../assets/anonify.png";
 
-function Navbar({ color, notHome }) {
+function Navbar({ color, notHome,hamburgerMenu }) {
+  const [isMenuOpen, setIsMenuOpen] = useState("closed");
+
   const smoothScrollTo = (targetPosition) => {
     const currentPosition = window.pageYOffset;
     const distance = targetPosition - currentPosition;
@@ -44,6 +46,15 @@ function Navbar({ color, notHome }) {
     }
   };
 
+  const toggleMenu = () => {
+    if(isMenuOpen=="closed"){
+      setIsMenuOpen("open");
+    }
+    else{
+      setIsMenuOpen("closed");
+    }
+  };
+
   return (
     <div className="navbar" style={{ backgroundColor: color }}>
       <div className="logo-section">
@@ -60,6 +71,20 @@ function Navbar({ color, notHome }) {
         </div>
         <div onClick={scrollToTeam} className="about-link">
           Team
+        </div>
+      </div>
+
+      <div className={`${hamburgerMenu} ${notHome}`}>
+        <div className="list" onClick={toggleMenu}>
+          <i className="bi bi-list"></i>
+        </div>
+        <div className={`mobile-menu ${isMenuOpen}`}>
+          <div onClick={scrollToAbout} className="about-link">
+            Tutorial
+          </div>
+          <div onClick={scrollToTeam} className="about-link">
+            Team
+          </div>
         </div>
       </div>
     </div>

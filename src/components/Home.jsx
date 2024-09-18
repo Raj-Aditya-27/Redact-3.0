@@ -7,7 +7,7 @@ import HeroSection from "./HeroSection";
 function Home() {
   return (
     <div className="home">
-      <Navbar color={"#212429"} />
+      <Navbar color={"#212429"} hamburgerMenu={"hamburger-menu"} />
       <HeroSection/>
       <div id="about-component">
       <About />
