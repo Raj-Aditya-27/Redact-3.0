@@ -3,7 +3,7 @@ import swaraat from "../assets/swaraat.png";
 
 function About() {
   return (
-    <div className="about-section">
+    <div className="about-section background">
       <div className="video">
         <iframe
           src="https://www.youtube.com/embed/n3ITmdALc7o?autoplay=1&mute=1"
@@ -19,7 +19,7 @@ function About() {
           compliance with privacy regulations.
         </div>
       </div>
-      <div className="team">
+      <div className="team" id="team">
         <div className="team-heading">Developer Team</div>
         <div className="team-members">
           <div className="members">

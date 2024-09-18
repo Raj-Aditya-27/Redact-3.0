@@ -4,7 +4,7 @@ import heroImage from "../assets/heroImageBg.png";
 
 function HeroSection() {
   return (
-    <div className="heroSection">
+    <div className="heroSection background">
       <div className="hero-content">
         <h2>Simple, Secure Redaction</h2>
         <p>
