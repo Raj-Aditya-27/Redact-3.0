@@ -1,9 +1,13 @@
 import React from "react";
 import swaraat from "../assets/swaraat.png";
+import aditya from "../assets/aditya.png";
+import nabeel from "../assets/nabeel.png";
+import syed from "../assets/syed.png";
 
 function About() {
   return (
     <div className="about-section background">
+      <div className="team-heading">Tutorial Video</div>
       <div className="video">
         <iframe
           src="https://www.youtube.com/embed/n3ITmdALc7o?autoplay=1&mute=1"
@@ -20,12 +24,12 @@ function About() {
         </div>
       </div>
       <div className="team" id="team">
-        <div className="team-heading">Developer Team</div>
+        <div className="team-heading">Team</div>
         <div className="team-members">
           <div className="members">
             <div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQGlzNfXyHR9-w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720377246855?e=1732147200&v=beta&t=G8BFJxcZdq6NUnjJUHWgMwVzc3DDR1Nv1xh3Ycjf9f8"
+                src={aditya}
                 alt=""
               />
             </div>
@@ -37,7 +41,7 @@ function About() {
           <div className="members">
             <div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQFujzrZpaytlg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725627302765?e=2147483647&v=beta&t=WrbWKkcSsXQsBpwqUOSrAqWrojRBaGq8WW7LMpS1w3A"
+                src={nabeel}
                 alt=""
               />
             </div>
@@ -58,7 +62,7 @@ function About() {
           <div className="members">
             <div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQH5Xtc0uicckA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1712479195831?e=2147483647&v=beta&t=VyLloNPPEM5EWzpNU9A_opG6-QlhaZ2bPQIaCnRMCPM"
+                src={syed}
                 alt=""
               />
             </div>
