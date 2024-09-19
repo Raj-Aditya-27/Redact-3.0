@@ -42,7 +42,7 @@ function About() {
               <div>Frontend Developer</div>
             </div>
             <div>
-              <Button content="Connect"/>
+              <a href="https://www.linkedin.com/in/aditya-raj-700051273/" target="_blank" className="link"><div className="button">Connect</div></a>
             </div>
           </div>
           <div className="members">
@@ -54,7 +54,7 @@ function About() {
               <div>Data Scientist</div>
             </div>
             <div>
-              <Button content="Connect"/>
+            <a href="https://www.linkedin.com/in/nabeelwasif/" target="_blank" className="link"><div className="button">Connect</div></a>
             </div>
           </div>
           <div className="members">
@@ -66,7 +66,7 @@ function About() {
               <div>Backend Developer</div>
             </div>
             <div>
-              <Button content="Connect"/>
+            <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADb8Y1cBbqnRQyE3Pll55WdC5XhOW1EsUOM&keywords=Swaraat%20Chatterjee&origin=ENTITY_SEARCH_HOME_HISTORY&sid=M)T" target="_blank" className="link"><div className="button">Connect</div></a>
             </div>
           </div>
           <div className="members">
@@ -78,7 +78,7 @@ function About() {
               <div>Cloud Developer</div>
             </div>
             <div>
-              <Button content="Connect"/>
+            <a href="https://www.linkedin.com/in/mannansaas/" target="_blank" className="link"><div className="button">Connect</div></a>
             </div>
           </div>
         </div>
