@@ -1,5 +1,5 @@
 import React from "react";
-import swaraat from "../assets/swaraat.png";
+import swaraat from "../assets/swaraat.jpeg";
 import aditya from "../assets/aditya.png";
 import nabeel from "../assets/nabeel.png";
 import syed from "../assets/syed.png";
@@ -11,10 +11,12 @@ function About() {
       <div className="team-heading">Tutorial Video</div>
       <div className="video">
         <iframe
-          src="https://www.youtube.com/embed/n3ITmdALc7o?autoplay=1&mute=1"
+           src="https://www.youtube.com/embed/r-80MlJG5wI?si=Xspnd6tDtwt9aVVk&autoplay=1&mute=1&loop=1&playlist=r-80MlJG5wI"
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
         ></iframe>
         <div className="video-details">
           Anonify is a powerful tool designed to protect your privacy by
@@ -42,7 +44,13 @@ function About() {
               <div>Frontend Developer</div>
             </div>
             <div>
-              <a href="https://www.linkedin.com/in/aditya-raj-700051273/" target="_blank" className="link"><div className="button">Connect</div></a>
+              <a
+                href="https://www.linkedin.com/in/aditya-raj-700051273/"
+                target="_blank"
+                className="link"
+              >
+                <div className="button">Connect</div>
+              </a>
             </div>
           </div>
           <div className="members">
@@ -54,7 +62,13 @@ function About() {
               <div>Data Scientist</div>
             </div>
             <div>
-            <a href="https://www.linkedin.com/in/nabeelwasif/" target="_blank" className="link"><div className="button">Connect</div></a>
+              <a
+                href="https://www.linkedin.com/in/nabeelwasif/"
+                target="_blank"
+                className="link"
+              >
+                <div className="button">Connect</div>
+              </a>
             </div>
           </div>
           <div className="members">
@@ -66,7 +80,13 @@ function About() {
               <div>Backend Developer</div>
             </div>
             <div>
-            <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADb8Y1cBbqnRQyE3Pll55WdC5XhOW1EsUOM&keywords=Swaraat%20Chatterjee&origin=ENTITY_SEARCH_HOME_HISTORY&sid=M)T" target="_blank" className="link"><div className="button">Connect</div></a>
+              <a
+                href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADb8Y1cBbqnRQyE3Pll55WdC5XhOW1EsUOM&keywords=Swaraat%20Chatterjee&origin=ENTITY_SEARCH_HOME_HISTORY&sid=M)T"
+                target="_blank"
+                className="link"
+              >
+                <div className="button">Connect</div>
+              </a>
             </div>
           </div>
           <div className="members">
@@ -78,7 +98,13 @@ function About() {
               <div>Cloud Developer</div>
             </div>
             <div>
-            <a href="https://www.linkedin.com/in/mannansaas/" target="_blank" className="link"><div className="button">Connect</div></a>
+              <a
+                href="https://www.linkedin.com/in/mannansaas/"
+                target="_blank"
+                className="link"
+              >
+                <div className="button">Connect</div>
+              </a>
             </div>
           </div>
         </div>
